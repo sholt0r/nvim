@@ -40,7 +40,7 @@ return {
         'lua_ls',
         'powershell_es',
         'puppet',
-        'pylsp',
+        'pyright',
         'rust_analyzer',
         'taplo',
         'lemminx',
