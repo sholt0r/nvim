@@ -50,7 +50,7 @@ return {
         function(server_name) -- default handler (optional)
 
           require('lspconfig')[server_name].setup {
-            capabilities = capabilities
+            capabilities = capabilities,
           }
         end,
 
@@ -92,6 +92,7 @@ return {
     })
 
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
 
     cmp.setup({
       snippet = {
