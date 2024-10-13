@@ -38,6 +38,7 @@ return {
         'htmx',
         'jsonls',
         'lua_ls',
+        'perlnavigator',
         'powershell_es',
         'puppet',
         'pyright',
