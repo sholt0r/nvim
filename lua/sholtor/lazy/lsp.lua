@@ -46,6 +46,7 @@ return {
         'taplo',
         'lemminx',
         'yamlls',
+        'zls',
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -64,6 +65,7 @@ return {
                 runtime = { version = 'Lua 5.1' },
                 diagnostics = {
                   globals = { 'vim', 'it', 'describe', 'before_each', 'after_each' },
+                filetypes = { 'lua', 'nse' }
                 }
               }
             }
