@@ -43,6 +43,7 @@ return {
         'puppet',
         'pyright',
         'rust_analyzer',
+        'svelte',
         'taplo',
         'lemminx',
         'yamlls',
