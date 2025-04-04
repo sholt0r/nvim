@@ -1,6 +1,7 @@
 return {
   'prichrd/netrw.nvim',
   config = function()
-    require("netrw").setup({})
+    local netrw = require("netrw")
+    netrw.setup({})
   end
 }

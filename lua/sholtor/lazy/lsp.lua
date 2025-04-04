@@ -32,7 +32,6 @@ return {
         'cssls',
         'dockerls',
         'docker_compose_language_service',
-        'eslint',
         'gopls',
         'html',
         'htmx',
@@ -45,6 +44,7 @@ return {
         'rust_analyzer',
         'svelte',
         'taplo',
+        'ts_ls',
         'lemminx',
         'yamlls',
         'zls',
@@ -73,6 +73,27 @@ return {
           }
         end,
 
+        ['ts_ls'] = function()
+          local lspconfig = require('lspconfig')
+          lspconfig.ts_ls.setup {
+            capabilities = capabilities,
+            settings = {
+              js = {
+                cmd = { 'typescript-language-server', '--stdio'},
+                filetypes = {
+                  "javascript",
+                  "javascriptreact",
+                  "javascript.jsx",
+                  "typescript",
+                  "typescriptreact",
+                  "typescript.tsx",
+                },
+                root_dir = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git'}
+              }
+            }
+          }
+        end,
+
         ['yamlls'] = function()
           local lspconfig = require('lspconfig')
           lspconfig.yamlls.setup {
@@ -92,6 +113,7 @@ return {
             }
           }
         end,
+
       }
     })
 

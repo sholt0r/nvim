@@ -3,8 +3,7 @@ return {
   version = "*",
   event = "VeryLazy",
   config = function()
-    require("nvim-surround").setup({
-
-    })
+    local surround = require('nvim-surround')
+    surround.setup()
   end
 }
